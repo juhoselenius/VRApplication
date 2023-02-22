@@ -1,0 +1,117 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &736631993772647895
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 736631993772647889}
+  - component: {fileID: 736631993772647890}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &736631993772647889
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 736631993772647895}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &736631993772647890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 736631993772647895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf66a27e7864ae14587d211bac606842, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - audioType: 1
+    name: BackgroundSound
+    clip: {fileID: 8300000, guid: 5a168c50fe0f1914cae0c021f2810867, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - audioType: 2
+    name: Level1_Dialogue1
+    clip: {fileID: 8300000, guid: 943c8923d03380543b7e5d34b9f22ed3, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - audioType: 2
+    name: Level1_Dialogue2
+    clip: {fileID: 8300000, guid: 9a823f831eebc404b9290e3f691a54d6, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - audioType: 2
+    name: Great
+    clip: {fileID: 8300000, guid: 53f45cd45037f4d42845b161c7f1578f, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - audioType: 2
+    name: Level1_Dialogue3
+    clip: {fileID: 8300000, guid: aaadaec8f1680504a8de9235b35b8417, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - audioType: 2
+    name: Level1_Dialogue4
+    clip: {fileID: 8300000, guid: 8c118a500d9ce4344819f5342458243a, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - audioType: 2
+    name: Level1_Dialogue5
+    clip: {fileID: 8300000, guid: f8a5162a6ea89cc4e937756278dcc28e, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - audioType: 2
+    name: Level1_Dialogue6
+    clip: {fileID: 8300000, guid: 9c62fb952baeb694f80c0e29dd4fac97, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - audioType: 2
+    name: Level2_Dialogue1
+    clip: {fileID: 8300000, guid: 73c4b4881243c6b4db52a67cbcd418ea, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - audioType: 2
+    name: Level2_Dialogue2
+    clip: {fileID: 8300000, guid: ee88bd5c92c808744ae280d80c225f78, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}

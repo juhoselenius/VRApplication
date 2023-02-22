@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &974946095594764061
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 974946095594764051}
+  - component: {fileID: 974946095594764048}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &974946095594764051
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 974946095594764061}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &974946095594764048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 974946095594764061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 616588e2bdb7c3d4abf7e9003b273d86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thrustReference: {fileID: -2557242650687275227, guid: c348712bda248c246b8c49b3db54643f,
+    type: 3}
+  airBrakeReference: {fileID: 807482062128403742, guid: c348712bda248c246b8c49b3db54643f,
+    type: 3}
+  thrusted: 0
+  braked: 0
+  cubeGrabbed: 0
+  cubeReleased: 0
+  level1Door: {fileID: 0}
+  cubeAtPlace: 0
+  cylinderAtPlace: 0
+  spherecubeAtPlace: 0
+  capsuleAtPlace: 0
+  sphereAtPlace: 0
+  plateAtPlace: 0
+  level2door: {fileID: 0}
+  counter: 0
+  controlsEnabled: 0
+  currentLevelIndex: 1
