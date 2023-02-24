@@ -7,6 +7,7 @@ using UnityEngine;
  * With the help of "Smooth Scene Fade Transition in VR"
  * by Valem Tutorials (https://www.youtube.com/watch?v=JCyJ26cIM0Y).
  */
+
 public class ScreenFader : MonoBehaviour
 {
     public bool fadeOnStart = true;
