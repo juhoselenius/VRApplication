@@ -150,3 +150,24 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - audioType: 0
+    name: Teleport
+    clip: {fileID: 8300000, guid: ac1efabd878f5ad45ab45c97153e9907, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - audioType: 0
+    name: Wind
+    clip: {fileID: 8300000, guid: a743319a4d50f624f84a7118a03c4a9c, type: 3}
+    volume: 0.25
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - audioType: 0
+    name: Gong
+    clip: {fileID: 8300000, guid: f6551b5dddc8e5b4e8e96ef508d13448, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}

@@ -182,6 +182,7 @@ public class GameManager : MonoBehaviour
             if (!dialogueThreeThree && teleported)
             {
                 AudioManager.aManager.Stop("Level3_Dialogue2");
+                AudioManager.aManager.Play("Teleport");
                 dialogueThreeThree = true;
                 AudioManager.aManager.Play("Level3_Dialogue3");
             }
@@ -197,10 +198,12 @@ public class GameManager : MonoBehaviour
                 dialogueThreeFour = true;
                 AudioManager.aManager.Play("Level3_Dialogue4");
                 level3Door = true;
+                AudioManager.aManager.Play("Wind");
             }
 
             if (!dialogueThreeFive && leverPulled)
             {
+                AudioManager.aManager.Stop("Wind");
                 AudioManager.aManager.Stop("Level3_Dialogue4");
                 dialogueThreeFive = true;
                 AudioManager.aManager.Play("Level3_Dialogue5");

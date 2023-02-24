@@ -31,6 +31,7 @@ public class ObjectPlacement : MonoBehaviour
     {
         if(gameObject.name == "CubePlaceholder" && other.gameObject.tag == "cube")
         {
+            AudioManager.aManager.Play("Gong");
             placedObject = other.gameObject;
             placedObject.transform.position = gameObject.transform.position;
             placedObject.transform.rotation = Quaternion.identity;
@@ -46,6 +47,7 @@ public class ObjectPlacement : MonoBehaviour
 
         if (gameObject.name == "CylinderPlaceholder" && other.gameObject.tag == "cylinder")
         {
+            AudioManager.aManager.Play("Gong");
             placedObject = other.gameObject;
             placedObject.transform.position = gameObject.transform.position;
             placedObject.transform.rotation = Quaternion.identity;
@@ -61,6 +63,7 @@ public class ObjectPlacement : MonoBehaviour
 
         if (gameObject.name == "SpherecubePlaceholder" && other.gameObject.tag == "spherecube")
         {
+            AudioManager.aManager.Play("Gong");
             placedObject = other.gameObject;
             placedObject.transform.position = gameObject.transform.position;
             placedObject.transform.rotation = Quaternion.identity;
@@ -76,6 +79,7 @@ public class ObjectPlacement : MonoBehaviour
 
         if (gameObject.name == "PlatePlaceholder" && other.gameObject.tag == "plate")
         {
+            AudioManager.aManager.Play("Gong");
             placedObject = other.gameObject;
             placedObject.transform.position = gameObject.transform.position;
             placedObject.transform.rotation = Quaternion.identity;
@@ -91,6 +95,7 @@ public class ObjectPlacement : MonoBehaviour
 
         if (gameObject.name == "SpherePlaceholder" && other.gameObject.tag == "sphere")
         {
+            AudioManager.aManager.Play("Gong");
             placedObject = other.gameObject;
             placedObject.transform.position = gameObject.transform.position;
             placedObject.transform.rotation = Quaternion.identity;
@@ -106,6 +111,7 @@ public class ObjectPlacement : MonoBehaviour
 
         if (gameObject.name == "CapsulePlaceholder" && other.gameObject.tag == "capsule")
         {
+            AudioManager.aManager.Play("Gong");
             placedObject = other.gameObject;
             placedObject.transform.position = gameObject.transform.position;
             placedObject.transform.rotation = Quaternion.identity;
