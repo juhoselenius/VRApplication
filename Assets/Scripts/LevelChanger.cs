@@ -3,6 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/*
+ * @Author: Juho Selenius
+ * With the help of "Smooth Scene Fade Transition in VR"
+ * by Valem Tutorials (https://www.youtube.com/watch?v=JCyJ26cIM0Y).
+ */
+
 public class LevelChanger : MonoBehaviour
 {
     public ScreenFader screenFader;

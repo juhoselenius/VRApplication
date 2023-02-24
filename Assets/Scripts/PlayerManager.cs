@@ -11,8 +11,6 @@ public class PlayerManager : MonoBehaviour
     public InputActionReference airBrakeReference = null;
     public Transform leftController;
 
-    public TextMeshProUGUI textWindow;
-
     public float thrustPower = 1f;
     public float brakePower = 1.25f;
 
@@ -29,12 +27,6 @@ public class PlayerManager : MonoBehaviour
 
     private void Update()
     {
-        //textWindow.text = "Velocity x: " + rb.velocity.x + "\nVelocity y:" + rb.velocity.y + "\nVelocity z:" + rb.velocity.z;
-        //textWindow.text = "AirBrakeRef value: " + airBrakeReference.action.ReadValue<float>();
-        // textWindow.text = "Playing sound: " + AudioManager.aManager.GetPlayingMusic().name;
-        // textWindow.text = "AtTelePad: " + GameManager.manager.atTelePad;
-        //textWindow.text = "CurrentLevel: " + GameManager.manager.currentLevelIndex;
-
         if (SceneManager.GetActiveScene().name == "Level3")
         {
             if(transform.position.z > 0.1f && !GameManager.manager.teleported)
@@ -43,7 +35,6 @@ public class PlayerManager : MonoBehaviour
                 GameManager.manager.counter = 0;
             }
         }
-
     }
 
     private void FixedUpdate()
@@ -103,7 +94,6 @@ public class PlayerManager : MonoBehaviour
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Teleport") && GameManager.manager.counter > 24)
         {
-            //textWindow.text = "Hit telepad!";
             rb.velocity = Vector3.zero;
             glassWall.layer = LayerMask.NameToLayer("Glass");
             GameManager.manager.atTelePad = true;
