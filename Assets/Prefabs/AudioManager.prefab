@@ -115,3 +115,38 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - audioType: 2
+    name: Level3_Dialogue1
+    clip: {fileID: 8300000, guid: 61074f282b3349848a0442511880db6d, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - audioType: 2
+    name: Level3_Dialogue2
+    clip: {fileID: 8300000, guid: 15e5f6922aefad44fa5dd3725b863f0c, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - audioType: 2
+    name: Level3_Dialogue3
+    clip: {fileID: 8300000, guid: 5ea0fec66ac22854bb00ccff43b78911, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - audioType: 2
+    name: Level3_Dialogue4
+    clip: {fileID: 8300000, guid: b06b8dda33938744688308e3d0a30399, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - audioType: 2
+    name: Level3_Dialogue5
+    clip: {fileID: 8300000, guid: 905437ac1b3aaa94d8a2c8d464590870, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}

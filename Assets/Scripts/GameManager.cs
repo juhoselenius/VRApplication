@@ -40,7 +40,20 @@ public class GameManager : MonoBehaviour
     public bool level2Door = false;
 
     // Level 3 objectives
-    public Animator level3Door = null;
+    private bool dialogueThreeOne = false;
+    private bool dialogueThreeTwo = false;
+    private bool dialogueThreeThree = false;
+    private bool dialogueThreeFour = false;
+    private bool dialogueThreeFive = false;
+
+    public bool atTelePad = false;
+    public bool teleported = false;
+    public bool atTheDoor = false;
+    public bool leverPulled = false;
+    
+    public bool level3Door = false;
+    public bool brokenDoor = false;
+    public bool gameEndDoor = false;
 
     public float counter = 0;
     public bool controlsEnabled = false;
@@ -146,6 +159,55 @@ public class GameManager : MonoBehaviour
                 AudioManager.aManager.Play("Level2_Dialogue2");
                 level2Door = true;
             }
+        }
+
+        // Level 3 mechanics
+        if (SceneManager.GetActiveScene().name == "Level3")
+        {
+
+            if (counter > 1 && !dialogueThreeOne)
+            {
+                dialogueThreeOne = true;
+                AudioManager.aManager.Play("Level3_Dialogue1");
+            }
+
+            if (!dialogueThreeTwo && atTelePad)
+            {
+                AudioManager.aManager.Stop("Level3_Dialogue1");
+                dialogueThreeTwo = true;
+                controlsEnabled = false;
+                AudioManager.aManager.Play("Level3_Dialogue2");
+            }
+
+            if (!dialogueThreeThree && teleported)
+            {
+                AudioManager.aManager.Stop("Level3_Dialogue2");
+                dialogueThreeThree = true;
+                AudioManager.aManager.Play("Level3_Dialogue3");
+            }
+
+            if (counter > 8 && !atTheDoor && teleported)
+            {
+                controlsEnabled = true;
+            }
+
+            if (!dialogueThreeFour && atTheDoor)
+            {
+                AudioManager.aManager.Stop("Level3_Dialogue3");
+                dialogueThreeFour = true;
+                AudioManager.aManager.Play("Level3_Dialogue4");
+                level3Door = true;
+            }
+
+            if (!dialogueThreeFive && leverPulled)
+            {
+                AudioManager.aManager.Stop("Level3_Dialogue4");
+                dialogueThreeFive = true;
+                AudioManager.aManager.Play("Level3_Dialogue5");
+                brokenDoor = true;
+                gameEndDoor = true;
+            }
+
         }
     }
 }

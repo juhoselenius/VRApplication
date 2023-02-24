@@ -20,6 +20,7 @@ public class PlayerManager : MonoBehaviour
 
     public GameObject levelChanger;
 
+    public GameObject glassWall;
 
     private void Awake()
     {
@@ -31,12 +32,18 @@ public class PlayerManager : MonoBehaviour
         //textWindow.text = "Velocity x: " + rb.velocity.x + "\nVelocity y:" + rb.velocity.y + "\nVelocity z:" + rb.velocity.z;
         //textWindow.text = "AirBrakeRef value: " + airBrakeReference.action.ReadValue<float>();
         // textWindow.text = "Playing sound: " + AudioManager.aManager.GetPlayingMusic().name;
-        textWindow.text = "Cube: " + GameManager.manager.cubeAtPlace + "\n" +
-            "Sphere: " + GameManager.manager.sphereAtPlace + "\n" +
-            "Spherecube: " + GameManager.manager.spherecubeAtPlace + "\n" +
-            "Capsule: " + GameManager.manager.capsuleAtPlace + "\n" +
-            "Cylinder: " + GameManager.manager.cylinderAtPlace + "\n" +
-            "Plate: " + GameManager.manager.plateAtPlace;
+        // textWindow.text = "AtTelePad: " + GameManager.manager.atTelePad;
+        textWindow.text = "CurrentLevel: " + GameManager.manager.currentLevelIndex;
+
+        if (SceneManager.GetActiveScene().name == "Level3")
+        {
+            if(transform.position.z > 0.1f && !GameManager.manager.teleported)
+            {
+                GameManager.manager.teleported = true;
+                GameManager.manager.counter = 0;
+            }
+        }
+
     }
 
     private void FixedUpdate()
@@ -85,14 +92,40 @@ public class PlayerManager : MonoBehaviour
             rb.AddForce(rb.velocity * (-1) * brakePower);
         }
 
+        if(GameManager.manager.leverPulled)
+        {
+            rb.useGravity = false;
+        }
+
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Teleport") && GameManager.manager.counter > 24)
+        {
+            textWindow.text = "Hit telepad!";
+            rb.velocity = Vector3.zero;
+            glassWall.layer = LayerMask.NameToLayer("Glass");
+            GameManager.manager.atTelePad = true;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Finish"))
         {
-            levelChanger.GetComponent<LevelChanger>().GoToScene(GameManager.manager.currentLevelIndex + 1);
+            textWindow.text = gameObject.name;
+            GameManager.manager.currentLevelIndex++;
+            levelChanger.GetComponent<LevelChanger>().GoToScene(GameManager.manager.currentLevelIndex);
         }
+
+        if (other.gameObject.layer == LayerMask.NameToLayer("Checkpoint"))
+        {
+            GameManager.manager.atTheDoor = true;
+            Physics.gravity = new Vector3(0, 0, 9.81f);
+            rb.useGravity = true;
+        }
+
     }
 
 }
