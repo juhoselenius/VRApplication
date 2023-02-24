@@ -33,7 +33,7 @@ public class PlayerManager : MonoBehaviour
         //textWindow.text = "AirBrakeRef value: " + airBrakeReference.action.ReadValue<float>();
         // textWindow.text = "Playing sound: " + AudioManager.aManager.GetPlayingMusic().name;
         // textWindow.text = "AtTelePad: " + GameManager.manager.atTelePad;
-        textWindow.text = "CurrentLevel: " + GameManager.manager.currentLevelIndex;
+        //textWindow.text = "CurrentLevel: " + GameManager.manager.currentLevelIndex;
 
         if (SceneManager.GetActiveScene().name == "Level3")
         {
@@ -103,7 +103,7 @@ public class PlayerManager : MonoBehaviour
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Teleport") && GameManager.manager.counter > 24)
         {
-            textWindow.text = "Hit telepad!";
+            //textWindow.text = "Hit telepad!";
             rb.velocity = Vector3.zero;
             glassWall.layer = LayerMask.NameToLayer("Glass");
             GameManager.manager.atTelePad = true;
@@ -114,7 +114,7 @@ public class PlayerManager : MonoBehaviour
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Finish"))
         {
-            textWindow.text = gameObject.name;
+            //textWindow.text = gameObject.name;
             GameManager.manager.currentLevelIndex++;
             levelChanger.GetComponent<LevelChanger>().GoToScene(GameManager.manager.currentLevelIndex);
         }
